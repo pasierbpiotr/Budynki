@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Pomieszczenie[] mojePomieszczenie = new Pomieszczenie() {
+        Pomieszczenie[] mojePomieszczenie = { new Pomieszczenie() {
             {
                 this.szerokosc = 3;
                 this.dlugosc = 2;
@@ -24,7 +24,7 @@ public class Main {
                         {
                             szerokosc = 2;
                             dlugosc = 2;
-                            nazwa = "lazienka";
+                            nazwa = "suszarnia";
                         }
                     }
             };
@@ -39,6 +39,7 @@ public class Main {
             };
 
             Garaz[] mojeGaraze = {
+                    new Garaz() {
                     {
                         szerokoscBramy = 3;
                         wysokoscBramy = 2;
@@ -48,6 +49,13 @@ public class Main {
             }
         };
 
-        Budynek
+        Budynek mojBudynek = new Budynek() {
+            {
+                powierzchniaDzialki = 20;
+                pietra = mojaPietra;
+                garaze = mojeGaraze;
+            }
+        };
+        System.out.println(mojBudynek.policzPole());
     }
 }
