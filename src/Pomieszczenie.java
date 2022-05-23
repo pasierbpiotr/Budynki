@@ -1,4 +1,4 @@
-public class Pomieszczenie {
+public class Pomieszczenie{
     int szerokosc, dlugosc;
     String nazwa;
 
